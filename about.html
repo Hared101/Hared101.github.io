@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 4</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<nav class="navbar">
+  <div class="navbar-header">
+    <button class="navbar-toggler" id="navbar-toggler">
+      <span class="navbar-toggler-icon">&#9776;</span>
+    </button>
+    <a href="#" class="navbar-brand">Website</a>
+  </div>
+  <div class="navbar-collapse" id="navbar-collapse">
+    <ul class="navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="content-area">
+    <h2>Products</h2>
+    <p>Here we offer the most up-to-date camera accesories!</p>
+    <button>Learn More</button>
+</div>
+
+
+<div class="form-container">
+    <h2>Featured Products</h2>
+    <ul>
+      <li>Featured Product 1</li>
+      <li>Featured Product 2</li>
+      <li>Featured Product 3</li>
+    </ul>
+</div>
+
+<script>
+    function validateForm() {
+      var nameInput = document.getElementById("name").value;
+      var emailInput = document.getElementById("email").value;
+      var nameError = document.getElementById("nameError");
+      var emailError = document.getElementById("emailError");
+
+  
+      if (nameInput === "") {
+        nameError.textContent = "This Field is Required";
+        return false;
+      } else {
+        nameError.textContent = "";
+      }
+      if (emailInput === "" || !emailInput.includes("@")) {
+      emailError.textContent = "Please enter a valid email address";
+      return false;
+    } else {
+      emailError.textContent = "";
+    }
+    return true;
+   }
+</script>
+
+<div class="photo-container">
+    <img src="nikon_z8.jpeg" alt="Nikon z8">
+    <img src="camera_2.jpeg" alt="Camera 2">
+    <img src="nikon_zfc.jpeg" alt="nikon_zfc">
+</div>
+
+<footer>
+    <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+  </footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 4</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<nav class="navbar">
+  <div class="navbar-header">
+    <button class="navbar-toggler" id="navbar-toggler">
+      <span class="navbar-toggler-icon">&#9776;</span>
+    </button>
+    <a href="#" class="navbar-brand">Website</a>
+  </div>
+  <div class="navbar-collapse" id="navbar-collapse">
+    <ul class="navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="content-area">
+    <h1>Social Media</h1>
+    <button>Instagram</button>
+    <button>Youtube</button>
+    <button>TikTok</button>
+    <button>Twitter</button>
+
+</div>
+
+
+<div class="form-container">
+    <h2>Contact</h2>
+    <form>
+      <h4></h4>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <div id="nameError" class="error-message"></div>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+      <div id="emailError" class="error-message"></div>
+      <button type="submit" onclick="validateForm()">Submit</button>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+      var nameInput = document.getElementById("name").value;
+      var emailInput = document.getElementById("email").value;
+      var nameError = document.getElementById("nameError");
+      var emailError = document.getElementById("emailError");
+
+  
+      if (nameInput === "") {
+        nameError.textContent = "This Field is Required";
+        return false;
+      } else {
+        nameError.textContent = "";
+      }
+      if (emailInput === "" || !emailInput.includes("@")) {
+      emailError.textContent = "Please enter a valid email address";
+      return false;
+    } else {
+      emailError.textContent = "";
+    }
+    return true;
+   }
+</script>
+
+<div class="photo-container">
+    <img src="nikon_zfc.jpeg" alt="Nikon ZFC">
+    <img src="camera_2.jpeg" alt="Camera 2">
+    <img src="nikon_z8.jpeg" alt="Nikon z8">
+</div>
+
+<footer>
+    <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+  </footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
